@@ -8,4 +8,11 @@
 	</buildSpec>
 	<natures>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>start.php</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/xampp/htdocs/ct/start.php</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
