@@ -1,1 +1,3 @@
-lskdjf
+<?php
+ echo "starting.gyuimgyukigyukfyukfyuk";
+?>
