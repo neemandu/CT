@@ -4,10 +4,8 @@
 <?php
 include_once 'Game.php';
 	$game = Game::Instance();
-	$game->addPlayer();
-	if($game->getNumOfPlayers() == 2){
-		echo "Lets begin playing!";
-	}
+	$game->addPlayer("dudi");
+	$game->addPlayer("nimrod");
 	
 	class Main
 	{

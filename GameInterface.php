@@ -2,9 +2,10 @@
 interface GameInterface{
 	
 	/**
+	 * @param String $id
 	 * add a new player to the game
 	 */
-	public function addPlayer();
+	public function addPlayer($id);
 	
 	/**
 	 * send a proposal from p1 to p2  

@@ -8,8 +8,8 @@
 		private $greenChips = 3;
 		private $Name = 3;
 	
-		function __construct() {
-			
+		function __construct($id) {
+			$this->Name = $id;
 		}
 	
 		// method declaration
@@ -32,6 +32,10 @@
 	
 		public function getGreenChips() {
 			return $this->greenChips;
+		}
+		
+		public function getName() {
+			return $this->Name;
 		}
 	}
 ?>
