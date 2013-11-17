@@ -5,8 +5,28 @@
 <script>
 	var socket = io.connect('http://localhost:4000');
 	socket.emit('my event', 'Hello world.');
+ 
 </script>
 </head>
 <body>
+
+<!-- Main Title Screen that appears when the page loads for the first time -->
+    <script id="intro-screen-template" type="text/template">
+
+        <center>
+		<div class="welcomeMainContent">
+			<h1>
+			<br>
+				Welcome to Colored Trails!!!
+			</h1>
+
+			<button class="bigButton" onclick="go()">
+				Let Me Play !
+			</button>
+		</div>
+		</center>
+
+    </script>
+
 </body>
 </html>
