@@ -1,4 +1,3 @@
-
 ;
 jQuery(function($){    
 	'use strict';
@@ -14,15 +13,19 @@ jQuery(function($){
 		            IO.socket = io.connect();
 		            IO.bindEvents();
 		            IO.socket.emit('signInPlayer');
+		            alert('init');
+		            
 		     },
 		     
 		     bindEvents : function()
 		     {
+		    	 	alert('binding');
 		            IO.socket.on('signInPlayer',IO.signInPlayer);
 		     },
 		     
 		     signInPlayer : function(data)
 		     {
+		    	 alert('signing');
 		    	 console.log("signIn");
 		     }
 
