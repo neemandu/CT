@@ -7,27 +7,29 @@ var path = require('path');
 // Create a new instance of Express
 var app = express();
 
-//Import the game file.
+// Import the Anagrammatix game file.
 var ct = require('./ct');
 
-//Create a Node.js based http server on port 8080
-var server = require('http').createServer(app).listen(4000);
-
-var io = require('socket.io').listen(server);
-
-
-//Create a simple Express application
+// Create a simple Express application
 app.configure(function() {
     // Turn down the logging activity
-    //app.use(express.logger('dev'));
+   app.use(express.logger('dev'));
 
     // Serve static html, js, css, and image files from the 'public' directory
     app.use(express.static(path.join(__dirname,'public')));
-  });
+});
 
-//Listen for Socket.IO Connections. Once connected, start the game logic.
+// Create a Node.js based http server on port 8080
+var server = require('http').createServer(app).listen(4000);
+
+// Create a Socket.IO server and attach it to the http server
+var io = require('socket.io').listen(server);
+
+// Reduce the logging output of Socket.IO
+io.set('log level',1);
+
+// Listen for Socket.IO Connections. Once connected, start the game logic.
 io.sockets.on('connection', function (socket) {
     //console.log('client connected');
-	console.log("enter");
-	ct.initGame(io, socket);
+    ct.initGame(io, socket);
 });

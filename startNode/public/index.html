@@ -1,23 +1,28 @@
 <html>
 <head>
-<title>Socket.IO example application</title>
-<script src="http://localhost:4000/socket.io/socket.io.js"></script>
-<script>
-	var socket = io.connect('http://localhost:4000');
-	socket.emit('my event', 'Hello world.');
- 
-</script>
-</head>
-<body>
-
-	<div id="gameArea">
+	<title>Colored Trails ?</title>
+	<script src="http://localhost:4000/socket.io/socket.io.js"></script>
 	
+	<meta charset="utf-8"/>
+
+    <!-- Ensure that everything scales appropriately on a mobile device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Let's borrow a cool looking Font from Google -->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+
+    <link href="css/styles.css" rel="stylesheet">
+	
+</head> <!-- some comment -->
+<body>
+	<div id="gameArea">
+		welcome to colored trails..
+		<button id="btnCreateGame">CREATE</button>
 	</div>
 
 		<!-- Main Title Screen that appears when the page loads for the first time -->
-	    <script id="welcome_page" type="text/template">
+	<script id="welcome_page" type="text/template">
 
-        <center>
 		<div class="welcomeMainContent">
 			<h1>
 			<br>
@@ -28,28 +33,25 @@
 				Let Me Play !
 			</button>
 		</div>
-		</center>
+	</script>
 
-        </script>
-		<!-- JavaScript Libraries -->
-	
-		<!-- jQuery! -->
-		<script src="libs/jquery-2.0.2.min.js"></script>
-	
-		<!-- TextFit resizes text to fill a container.
-	        It's used so the titles and game words fit properly on any size screen.
-	        https://github.com/STRML/textFit   -->
-		<script src="libs/textFit.min.js"></script>
-	
-		<!-- FastClick is used to eliminate the 300ms delay when clicking items on a mobile device
-	        https://github.com/ftlabs/fastclick -->
-		<script src="libs/fastclick.js"></script>
-	
-		<!-- If Socket.IO is used with Express, then the /socket.io/ path will
-	        serve the proper Socket.IO javascript files used by the browser -->
-		<script src="/socket.io/socket.io.js"></script>
-	
-		<!-- app.js is where all the client-side Anagrammatix game logic -->
-		<script src="app.js"></script>
+    <!-- jQuery! -->
+    <script src="libs/jquery-2.0.2.min.js"></script>
+
+    <!-- TextFit resizes text to fill a container.
+        It's used so the titles and game words fit properly on any size screen.
+        https://github.com/STRML/textFit   -->
+    <script src="libs/textFit.min.js"></script>
+
+    <!-- FastClick is used to eliminate the 300ms delay when clicking items on a mobile device
+        https://github.com/ftlabs/fastclick -->
+    <script src="libs/fastclick.js"></script>
+
+    <!-- If Socket.IO is used with Express, then the /socket.io/ path will
+        serve the proper Socket.IO javascript files used by the browser -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- app.js is where all the client-side Anagrammatix game logic -->
+    <script src="app.js"></script>
 </body>
 </html>
